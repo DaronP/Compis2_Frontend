@@ -3,7 +3,7 @@ import './styles.css'
 import styled, { css } from "styled-components";
 import API from 'apisauce'
 
-const baseURL = `http://181.209.144.112:3000`
+const baseURL = `http://192.168.56.1:3000`
 
 const APICall = API.create({baseURL: baseURL})
 
@@ -22,7 +22,7 @@ export const FileInput = () => {
 
     async function posting(val: string){
       const response = await APICall.post(
-        '/file',
+        '/code',
         {
             "code": val
         }

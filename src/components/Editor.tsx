@@ -16,10 +16,9 @@ type TextareaProps = {
 };
 
 const StyledTextareaWrapper = styled.div`
-  margin: auto;
   border: 1px solid grey;
   border-radius: 2px;
-  width: 50%;
+  width: 150%;
   height: 600px;
   padding: 10px;
 `;
@@ -102,7 +101,7 @@ export const Editor = ({
 
   async function posting(val: string){
     const response = await APICall.post(
-      '/file',
+      '/code',
       {
           "code": val
       }
