@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import API from 'apisauce'
+import { ApiResponse } from 'apisauce'
 
 const baseURL = `https://private-e30dc5-compistest.apiary-mock.com`
 
@@ -9,7 +10,7 @@ export const Errors = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        APICall.get('/questions').then(response => setData(response.data));
+        APICall.get('/questions').then((response) => setData(response.data));
     }, []);
 
     function gettingPrint(){

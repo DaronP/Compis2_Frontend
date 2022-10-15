@@ -3,6 +3,7 @@ import './App.css';
 import { Editor } from './components/Editor';
 import { FileInput } from './components/FileInput';
 import { Table } from './components/Table';
+import { Errors } from './components/Errors';
 
 const App: React.FC = () => {
   const [value, setValue] = useState("");
@@ -19,6 +20,7 @@ const App: React.FC = () => {
           numOfLines={30}
         />
         <FileInput />
+        <Errors/>
       </div>
       <Table/>
     </div>
