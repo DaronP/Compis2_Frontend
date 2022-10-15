@@ -2,6 +2,7 @@ import React, { useMemo, useRef } from "react";
 import styled, { css } from "styled-components";
 import API from 'apisauce'
 
+import Button from '@mui/material'
 const baseURL = `http://181.209.144.112:3000`
 
 const APICall = API.create({baseURL: baseURL})
@@ -138,7 +139,9 @@ export const Editor = ({
           value={value}
           wrap="off"
         />
+
         <button onClick={onClickHandle}>Compile from text</button>
+        
       </StyledTextareaWrapper>
       
     </div>
